@@ -8,56 +8,66 @@ Individual::~Individual() {
 
 }
 
-void Individual::setWidth(int w) {
-
-	width = w;
-}
-
-void Individual::setHeight(int h) {
+void Individual::setPoint0(int a, int b) {
 	
-	height = h;
+	x0 = a;
+	y0 = b;
 }
-
-void Individual::setX(int a) {
-
-	x = a;
-}
-
-void Individual::setY(int a) {
+void Individual::setPoint1(int a, int b) {
 	
-	y = a;
+	x1 = a;
+	y1 = b;
+}
+
+int Individual::getX0() {
+
+	return x0;
+}
+
+int Individual::getY0() {
+	
+	return y0;
+}
+
+int Individual::getX1() {
+	
+	return x1;
+}
+
+int Individual::getY1() {
+
+	return y1;
+}
+
+int Individual::getCentralX() {
+	
+	return (int)(x1-x0)/2;
+}
+
+int Individual::getCentralY() {
+
+	return (int)(y1-y0)/2;
 }
 
 int Individual::getWidth() {
-
-	return width;
+	
+	return x1-x0;
 }
 
 int Individual::getHeight() {
 
-	return height;
-}
-
-int Individual::getX() {
-
-	return x;
-}
-
-int Individual::getY() {
-
-	return y;
+	return y1-y0;
 }
 
 double Individual::getProportion() {
-	return (double)width/(double)height;
+
+	return (double)getHeight()/(double)getWidth();
 }
 
 void Individual::printInfo() {
 
 	cout << "O individuo possui ";
-	cout << "largura: " << width;
-	cout << ", altura: " << height;
-	cout << ", abcissa: " << x;
-	cout << ", ordenada: " << y;
+	cout << "largura: " << getWidth();
+	cout << ", altura: " << getHeight();
 	cout << " e proporção: " << getProportion() << endl;
 }

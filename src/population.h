@@ -19,6 +19,17 @@ class Population {
 	protected:
 	private:
 		list<Individual*> individuals;
+
+		int widthSum;
+		int heightSum;
+		int proportionSum;
+		
+		double widthAvg;
+		double heightAvg;
+		double proportionAvg;
+		
+		int widthParam;
+		int heightParam;
 };
 
 #endif

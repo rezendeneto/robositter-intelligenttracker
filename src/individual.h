@@ -12,24 +12,24 @@ class Individual {
 	public:
 		Individual();
 		virtual ~Individual();
-		
-		void setWidth(int w);
-		void setHeight(int h);
-		void setX(int a);
-		void setY(int a);
+		void setPoint0(int a, int b);
+		void setPoint1(int a, int b);
+		int getX0();
+		int getY0();
+		int getX1();
+		int getY1();
+		int getCentralX();
+		int getCentralY();
 		int getWidth();
 		int getHeight();
-		int getX();
-		int getY();
 		double getProportion();
-		
 		void printInfo();
 	protected:
 	private:
-		int width;
-		int height;
-		int x;
-		int y;
+		int x0;
+		int y0;
+		int x1;
+		int y1;
 };
 
 #endif
